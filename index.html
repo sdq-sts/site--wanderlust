@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT|Roboto+Condensed:400,700" rel="stylesheet">
+  <title></title>
+</head>
+<body>
+  <style>
+  .section { overflow: hidden; }
+  .loading-cover {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    z-index: 9000;
+  }
+  .loading-cover--hide {
+    animation-name: fade-out-cover;
+    animation-fill-mode: forwards;
+    animation-duration: 3s;
+  }
+  </style>
+
+  <div class="loading-cover"></div>
+
+  <div id="fullpage">
+
+    <section class="section home-section">
+      <div class="home-section__inner">
+        <div class="section-info">
+          <div class="suitcase"><img src="img/home/suitcase.png"></div>
+          <h1 class="site-title">Wanderlust</h1>
+          <p class="site-description">- 3 lugares para conhecer no mundo -</p>
+        </div>
+      </div>
+
+      <nav class="navigation">
+          <div class="menu">
+            <ul class="menu__list list">
+              <li data-menuanchor="secondPage" class="list__item"><a href="#atacama">Atacama</a></li>
+              <li data-menuanchor="thirdPage" class="list__item"><a href="#iceland">Islândia</a></li>
+              <li data-menuanchor="fourthPage" class="list__item"><a href="#japan">Japão</a></li>
+            </ul>
+          </div>
+        <div class="navigation__btn"><img class="navigation__btn__img"src="img/hamburger.svg"></div>
+      </nav>
+    </section>
+
+    <section class="section atacama">
+      <div class="atacama-img"></div>
+      <div class="atacama-section">
+
+        <h1 class="section-title">Atacama</h1>
+
+        <div class="wiki-box">
+          <p class="wiki-box__text">
+            <strong>Deserto do Atacama</strong> está localizado na região 
+            norte do Chile até a fronteira com o Peru. Com cerca de 1000km
+            de extensão, é considerado o deserto mais alto do mundo.
+
+            <p class="wiki-box__link"><a href="https://pt.wikipedia.org/wiki/Deserto_de_Atacama" target="_blank">+ wiki +</a></p>
+          </p>
+        </div>
+
+        <div class="atacama-carousel owl-carousel">
+          <img class="carousel-img" src="img/atacama/atacama1.jpg">
+          <img class="carousel-img" src="img/atacama/atacama2.jpg">
+          <img class="carousel-img" src="img/atacama/atacama3.jpg">
+          <img class="carousel-img" src="img/atacama/atacama4.jpg">
+          <img class="carousel-img" src="img/atacama/atacama5.jpg">
+        </div>
+      </div>
+    </section>
+
+    <section class="section iceland">
+      <div class="iceland-img"></div>
+      <div class="iceland-section">
+        <h1 class="section-title">Islândia</h1>
+        <div class="wiki-box">
+          <p class="wiki-box__text">
+            <strong>Islândia</strong> é um país nórdico situado no oceano Atlântico Norte.
+            As características naturais como gêiseres, as piscinas quentes de lama e os glaciares,
+            atraem muitos visitantes para o país.
+
+            <p class="wiki-box__link"><a href="https://pt.wikipedia.org/wiki/Isl%C3%A2ndia" target="_blank">+ wiki +</a></p>
+
+          </p>
+        </div>
+
+        <div class="iceland-carousel owl-carousel">
+          <img class="carousel-img" src="img/iceland/iceland1.jpg">
+          <img class="carousel-img" src="img/iceland/iceland2.jpg">
+          <img class="carousel-img" src="img/iceland/iceland3.jpg">
+          <img class="carousel-img" src="img/iceland/iceland4.jpg">
+          <img class="carousel-img" src="img/iceland/iceland5.jpg">
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section japan">
+      <div class="japan-img"></div>
+      <div class="japan-section">
+
+        <h1 class="section-title">Japão</h1>
+
+        <div class="wiki-box">
+          <p class="wiki-box__text">
+            <strong>Japão</strong> é um país insular da Ásia Oriental. Os caracteres
+            que compõem seu nome significam <i>"Origem do Sol"</i>, razão pela qual
+            o Japão é às vezes identificado como a <i>"Terra do Sol Nascente"</i>.
+
+            <p class="wiki-box__link"><a href="https://pt.wikipedia.org/wiki/Jap%C3%A3o" target="_blank">+ wiki +</a></p>
+          </p>
+        </div>
+
+        <div class="japan-carousel owl-carousel">
+          <img class="carousel-img" src="img/japan/japan1.jpg">
+          <img class="carousel-img" src="img/japan/japan2.jpg">
+          <img class="carousel-img" src="img/japan/japan3.jpg">
+          <img class="carousel-img" src="img/japan/japan4.jpg">
+          <img class="carousel-img" src="img/japan/japan5.jpg">
+        </div>
+
+      </div>
+    </section>
+  </div>
+</body>
+</html>

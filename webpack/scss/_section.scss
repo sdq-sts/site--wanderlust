@@ -1,0 +1,387 @@
+.section {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.section-title {
+  z-index: 300;
+  font-size: 5rem;
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  letter-spacing: .5em;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Old Standard TT', serif;
+  font-weight: 400;
+  opacity: 0;
+
+  &--hide {
+    animation-name: title-fade-out;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+  }
+
+  &--show {
+    animation-name: title-fade-in;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+  }
+}
+
+.wiki-box {
+  z-index: 300;
+  background: #fff;
+  padding: 2.5em;
+  font-size: .8em;
+  position: absolute;
+  left: calc(500px - 16em);
+  bottom: 15%;
+  width: 11em;
+  line-height: 1.3;
+  opacity: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+
+  &__link {
+    display: block;
+    margin-top: 2em;
+    
+    > a {
+      text-decoration: none;
+      color: #000;
+    }
+  }
+
+  &--hide {
+    animation-name: wiki-fade-out;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+  }
+
+  &--show {
+    animation-name: wiki-fade-in;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+  }
+}
+
+.atacama-section,
+.iceland-section,
+.japan-section {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background: #232121;
+}
+
+.owl-dots {
+  margin: 0 auto;
+  margin-top: 4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .owl-dot {
+    background: #fff;
+    margin: 0 1em;
+    height: 4px;
+    width: 2.5em;
+
+    &.active {
+      background: #101010;
+    }
+  }
+}
+
+.owl-carousel {
+  z-index: 500;
+}
+
+.atacama-img,
+.iceland-img,
+.japan-img {
+  position: absolute;
+  filter: blur(5px);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  &--show {
+    animation-name: fade-in;
+    animation-duration: .550s;
+    animation-fill-mode: forwards;
+  }
+
+  &--hide {
+    animation-name: fade-out;
+    animation-duration: .150s;
+    animation-fill-mode: forwards;
+  }
+}
+
+@media all and (max-width: 1600px) {
+  .section-title {
+    top: 2vh;
+  }
+
+  .wiki-box {
+    left: calc(300px - 16em);
+  }
+
+  .owl-dots {
+    width: 100%;
+    margin-top: 2em;
+  }
+}
+
+@media all and (max-width: 1300px) {
+  .section-title {
+    font-size: 4.5rem;
+    letter-spacing: .4em;
+    left: 5%;
+  }
+
+  .wiki-box {
+    left: calc(200px - 16em);
+  }
+}
+
+@media all and (max-width: 1100px) {
+  .section-title {
+    font-size: 4.5rem;
+    letter-spacing: .4em;
+    left: 5%;
+  }
+
+  .wiki-box {
+    left: calc(250px - 16em);
+    bottom: 4em;
+    padding: 2em;
+  }
+}
+
+@media all and (max-width: 900px) {
+  .wiki-box {
+    left: 2em;
+    bottom: 5em;
+    padding: 1.5em;
+  }
+
+  .section-title {
+    font-size: 4.2rem;
+    letter-spacing: .37em;
+    left: 8%;
+    top: .5em;
+  }
+
+  .owl-dots {
+    margin-left: calc(1em + 180px);
+    width: 70%;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .wiki-box {
+    padding: 1.5em;
+    font-size: .8em;
+    width: 80%;
+    left: calc(10% - 18px);
+    bottom: 2em;
+  }
+
+  .section-title {
+    font-size: 4.2rem;
+    width: 100%;
+    letter-spacing: .3em;
+    left: 0;
+    top: .5em;
+    text-align: center;
+  }
+
+  .owl-dots {
+    margin: 1em auto;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .section-title {
+    font-size: 3.2rem;
+    letter-spacing: .2em;
+    top: 1em;
+  }
+}
+
+@media all and (max-width: 380px) {
+  .section-title {
+    font-size: 3rem;
+    letter-spacing: .2em;
+    top: 1em;
+  }
+}
+
+// IPAD PRO 1024 x 1366
+@media all and (max-device-width: 1024px) and (max-device-height: 1366px) and (orientation: portrait) {
+  .section-title {
+    font-size: 8rem;
+    text-align: center;
+    top: .5em;
+    left: 0;
+    width: 100%;
+    letter-spacing: .3em;
+  }
+
+  .wiki-box {
+    padding: 1.5em;
+    left: 0;
+    width: 80%;
+    font-size: 1.2em;
+    margin-left: calc(10% - 18px);
+    bottom: 6em;
+  }
+}
+
+// IPAD 768 x 1024
+@media all and (max-device-width: 768px) and (max-device-height: 1024px) and (orientation: portrait) {
+  .section-title {
+    font-size: 6rem;
+    text-align: center;
+    top: .5em;
+    left: 0;
+    width: 100%;
+    letter-spacing: .3em;
+  }
+
+  .owl-dots {
+    margin: 3em auto;
+  }
+
+  .wiki-box {
+    padding: 1.5em;
+    left: 0;
+    width: 80%;
+    font-size: 1em;
+    margin-left: calc(10% - 18px);
+    bottom: 4em;
+  }
+}
+
+// NEXUS 7 600 x 960
+@media all and (max-device-width: 768px) and (max-device-height: 1024px) and (orientation: portrait) {
+  .section-title {
+    font-size: 4.8rem;
+  }
+}
+
+// IPHONE 6 PLUS 414 x 736
+@media all and (max-device-width: 414px) and (max-device-height: 736px) and (orientation: portrait) {
+  .section-title {
+    font-size: 3rem;
+    text-align: center;
+    top: 1em;
+    left: 0;
+    width: 100%;
+    letter-spacing: .3em;
+  }
+
+  .owl-dots {
+    margin: 3em auto 2em;
+  }
+
+  .wiki-box {
+    padding: 1.2em;
+    left: 0;
+    width: 80vw;
+    line-height: 1;
+    font-size: .9em;
+    margin: 0 calc(10vw - 1.2em);
+    bottom: 2em;
+  }
+}
+
+// IPHONE 6 375 x 667
+@media all and (max-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) {
+  .section-title {
+    font-size: 3rem;
+    text-align: center;
+    top: 1em;
+    left: 0;
+    width: 100%;
+    letter-spacing: .3em;
+  }
+
+  .owl-dots {
+    margin: 3em auto 3em;
+  }
+
+  .wiki-box {
+    padding: 1.2em;
+    left: 0;
+    width: 80vw;
+    line-height: 1;
+    font-size: .9em;
+    margin: 0 calc(10vw - 1.2em);
+    bottom: 2em;
+  }
+}
+
+// IPHONE 5 320 x 568
+@media all and (max-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) {
+  .section-title {
+    font-size: 2.3rem;
+    text-align: center;
+    margin-top: 1.3em;
+    top: .5em;
+    left: 0;
+  }
+
+  .owl-dots {
+    margin: 1em auto 4em;
+  }
+
+  .wiki-box {
+    padding: 1.5em;
+    left: 0;
+    width: 80vw;
+    line-height: 1;
+    font-size: .8em;
+    margin: 0 calc(10vw - 1.5em);
+    bottom: 2em;
+  }
+}
+
+// IPHONE 4 320 x 480
+@media all and (max-device-width: 320px) and (max-device-height: 480px) and (orientation: portrait) {
+  .section-title {
+    font-size: 2.3rem;
+    text-align: center;
+    margin-top: .8em;
+    left: 0;
+  }
+
+  .owl-dots {
+    margin: 2em auto;
+  }
+
+  .wiki-box {
+    padding: 1.5em;
+    left: 0;
+    width: 80vw;
+    line-height: 1;
+    font-size: .5em;
+    margin: 0 calc(10vw - 1.5em);
+    bottom: 2em;
+  }
+}
+
+// Tubo? 1024 x 1024
+@media all and (max-device-width: 1024px) and (max-device-height: 1024px) {
+  .owl-dots {
+    margin: 3em auto;
+  }
+
+  .wiki-box {
+    bottom: 2em;
+    padding: 1em;
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "entry": "./js/index.js",
+  "distPath": "dist",
+  "jsFilename": "bundle.js",
+  "cssFilename": "style.css",
+  "pages": [
+    {
+      "title": "Wanderlust",
+      "filename": "index.html",
+      "template": "index.html"
+    }
+  ]
+}
