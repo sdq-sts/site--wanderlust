@@ -6,13 +6,15 @@ import carouselInit from './carouselInit'
 
 $(document).ready(function () {
   const countries = ['atacama', 'iceland', 'japan']
-  const loadingCover = document.querySelector('.loading-cover')
 
   menuInit()
   fullPageInit()
 
   // Cria os slides para cada país
   countries.map((el) => { carouselInit(el) })
+})
 
+window.addEventListener('load', () => {
+  const loadingCover = document.querySelector('.loading-cover')
   loadingCover.classList.add('loading-cover--hide')
 })

@@ -4,16 +4,16 @@
   left: 1em;
   opacity: 0;
   transform: translateX(200px);
-
+  
   &__list {
     list-style: none;
     margin: 0;
     padding: 0;
-
+    
     a {
       text-decoration: none;
       text-transform: uppercase;
-      font-family: sans-serif;
+      font-family: "Old Standard TT", serif;
       color: #383838;
     }
   }
